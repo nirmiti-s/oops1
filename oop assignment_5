@@ -1,0 +1,27 @@
+#include<iostream>
+using namespace std;
+class student
+{
+public:
+int registration_id;
+int division;
+string name;
+student(int registration_id, int division, string name)
+{
+this->registration_id=registration_id;
+this->division=division;
+this->name=name;
+}
+void display()
+{
+cout<<"registration_id: "<<this->registration_id<<endl;
+cout<<"division: "<<this->division<<endl;
+cout<<"name: "<<this->name<<endl;
+}
+};
+int main()
+{
+student s1(1404, 1, "Nirmitii");
+s1.display();
+return 0;
+}
