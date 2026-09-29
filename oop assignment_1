@@ -1,34 +1,36 @@
-include <iostream>
+#include<iostream>
 using namespace std;
-
 class book
 {
 public:
- int id;
- float prize;
- string title;
+int id;
+float price;
 
-void display()
+void input()
 {
-cout<<"book id: "<<endl;
+cout<<"ENTER BOOK ID: "<<endl;
 cin>>id;
 
-cout<<"book prize: "<<endl;
-cin>>prize;
-
-cout<<"title of the book: "<<endl;
-cin>>title;
-
+cout<<"ENTER BOOK PRICE: "<<endl;
+cin>>price;
 }
+void display()
+{
+cout<<"BOOK ID IS : " << id << endl;
+cout<<"BOOK PRICE IS : " << price << endl;
+}
+
 };
 int main()
 {
+book b1,b2;
 
-book b1;
-b1.id;
-b1.prize;
-b1.title;
+b1.input();
 b1.display();
+
+b2.input();
+b2.display();
+
 return 0;
 }
 
