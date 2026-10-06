@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+class person
+{
+    public :
+    int id;
+    int age;
+    float salary;
+    void display()
+    {
+        cout << "ID OF THE EMPLOYEE:->" <<id<< endl;
+        cout << "AGE OF THE EMPLOYEE  :->" << age << endl;
+        cout << "SALARY OF THE EMPLOYEE  :->" << salary << endl;
+    }
+};
+class employee : public person
+{
+    public :
+    string name;
+    int id;
+    void show()
+    {
+         cout << "NAME OF EMPLOYEE  :->" << name << endl;
+          cout << "ID OF EMPLOYEE  :->" << id << endl;
+    }
+};
+class manager : public employee
+{
+    public :
+    string post;
+    void get()
+    {
+         cout << "POST OF MANAGER  :->" << post << endl;
+    }
+};
+int main()
+{
+    manager m1;
+    cout << "............MANAGER DETAILS.............." << endl << endl;
+    m1.id=5436;
+    m1.age=18;
+    m1.salary=467899.97;
+    m1.name="Nirmiti salvi";
+    m1.id=1;
+    m1.post="Assistant manager ";
+    m1.display();
+    m1.show();
+    m1.get();
+    return 0;
+
+}
